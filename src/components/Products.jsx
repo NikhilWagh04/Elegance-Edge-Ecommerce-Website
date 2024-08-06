@@ -15,8 +15,8 @@ const Products = ({ cat, filters, sort }) => {
   const getProducts = async () => {
     try {
       const res = await axios.get(cat ?
-        `http://localhost:5000/api/products?category=${cat}`
-        : "http://localhost:5000/api/products");
+        `https://e-ecommerce.onrender.com/api/products?category=${cat}`
+        : "https://e-ecommerce.onrender.com/api/products");
       console.log(res);
       setProducts(res.data);
       console.log("Data get sucessfully");
