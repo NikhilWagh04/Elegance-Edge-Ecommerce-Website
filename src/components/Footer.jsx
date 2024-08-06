@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Facebook, Instagram, MailOutline, Phone, Pinterest, Room, Twitter } from '@material-ui/icons';
+import { Facebook, Instagram, MailOutline, Phone, Pinterest, Room, Twitter } from '@mui/icons-material';
 import { mobile } from '../responsive';
 import { Link } from "react-router-dom";
 

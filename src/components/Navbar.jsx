@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import { Search, ShoppingCartOutlined } from "@material-ui/icons";
-import { Badge } from "@material-ui/core";
+import { Search, ShoppingCartOutlined } from "@mui/icons-material";
+import { Badge } from "@mui/material";
 import { Link ,useNavigate} from "react-router-dom";
 import { mobile } from "../responsive";
-import { grey } from "@material-ui/core/colors";
+import { grey } from "@mui/material/colors";
 import { useSelector, useDispatch } from "react-redux";
 import { logout } from "../redux/userRedux"; // Import logout action
  // Import logout action
