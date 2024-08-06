@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import { Link,useNavigate } from 'react-router-dom';
 import { mobile } from '../responsive';
 import axios from 'axios';
 import { toast, ToastContainer } from 'react-toastify';
@@ -74,6 +74,7 @@ const Register = () => {
     confirmPassword: '',
   });
   const [errors, setErrors] = useState({});
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -119,6 +120,7 @@ const Register = () => {
         confirmPassword: '',
       });
       console.log(response.data);
+        navigate('/login');
       // Optionally, you can redirect the user to another page after successful registration
     } catch (err) {
       if (err.response && err.response.data && err.response.data.message) {

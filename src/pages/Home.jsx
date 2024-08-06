@@ -56,9 +56,9 @@ const Home = () => {
      
       <Newsletter/>
       <Footer/>
-      <PopUp isOpen={isOpen} onClose={closePopUp}>
+      {/* <PopUp isOpen={isOpen} onClose={closePopUp}>
         <h2>Welcome to our store</h2>
-      </PopUp>
+      </PopUp> */}
     </div>
   );
 };
