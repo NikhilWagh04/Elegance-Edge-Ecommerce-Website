@@ -92,7 +92,7 @@ const Login = () => {
           <Button onClick={handleClick} disabled={isFetching}>
             LOGIN
           </Button>
-          {error && <Error>Something went wrong...</Error>}
+          
           <LinkStyled to="/register">CREATE A NEW ACCOUNT</LinkStyled>
         </Form>
       </Wrapper>
