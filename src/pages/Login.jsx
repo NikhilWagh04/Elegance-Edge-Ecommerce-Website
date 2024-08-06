@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { login } from '../redux/apiCalls';
 import { mobile } from '../responsive';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Container = styled.div`
   width: 100vw;
@@ -60,15 +62,11 @@ const LinkStyled = styled(Link)`
   cursor: pointer;
 `;
 
-const Error = styled.span`
-  color: red;
-`;
-
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const dispatch = useDispatch();
-  const { isFetching, error } = useSelector((state) => state.user);
+  const { isFetching } = useSelector((state) => state.user);
 
   const handleClick = (e) => {
     e.preventDefault();
@@ -96,6 +94,7 @@ const Login = () => {
           <LinkStyled to="/register">CREATE A NEW ACCOUNT</LinkStyled>
         </Form>
       </Wrapper>
+      <ToastContainer />
     </Container>
   );
 };
